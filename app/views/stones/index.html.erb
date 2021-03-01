@@ -1,0 +1,7 @@
+<h1>INDEX STONES</h1>
+
+<% @stones.each do |stone|  %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url(https://source.unsplash.com/featured/?stone);">
+  <div><%= link_to stone.name, stone_path(stone) %></div>
+  </div>
+<% end %>
