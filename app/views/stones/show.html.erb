@@ -1,15 +1,27 @@
-<div class = "container">
 
-    <div class = "stone-infos">
+
+
+      <div class = "stone-name">
         <h2> <%= @stone.name %></h2>
+      </div>
+
+<div class = "container">
+    <div class = "stone-infos">
         <h3> <%= @stone.category %></h3>
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/31/31370.svg?token=exp=1614704882~hmac=7935d8cb0d2ec279cccacd93c109dd86" alt="">       
         <h4> <%= @stone.age %> years old</h4>
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/847/847485.svg?token=exp=1614704977~hmac=fbc0f4f8afc75024d15a18993dc9d55b" alt="">       
         <h4> <%= @stone.size %> cm</h4>
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/2929/2929016.svg?token=exp=1614705008~hmac=ee988b1158658e948cffa481aef58a6b" alt="">       
         <h4> <%= @stone.weight %> kg</h4>
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/2619/2619921.svg?token=exp=1614705107~hmac=23ab58cc99905a2b1ed497c6e0019b69" alt="">      
         <h4> <%= @stone.gender %></h4>
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/618/618859.svg?token=exp=1614705149~hmac=eeeaed15c10319d7c374cab4d16c1be2" alt="">      
         <h4> <%= @stone.town %></h4>
         <h3> <%= @stone.price %> €</h3>
+      </div>
     </div>
+
 
 
     <div class = "share-and-save">
@@ -18,7 +30,8 @@
         Save:
         <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/1844/1844415.svg?token=exp=1614691114~hmac=e75cafb569108da8a9a97f16487fbc61" alt="">
     </div>
-
+    
+  <div class = "container">
     <div class = "carousel">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -42,7 +55,7 @@
         </a>
         </div>
     </div>
-
+  </div>
 
     <div class = "descrition">
     <p> <%= @stone.name %>'s descriptionn: <%= @stone.description %></p>
@@ -58,4 +71,3 @@
 
     </div>
 
-</div>
