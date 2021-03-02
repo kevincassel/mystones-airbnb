@@ -1,0 +1,59 @@
+<div class = "container">
+
+    <div class = "stone-infos">
+        <h2> <%= @stone.name %></h2>
+        <h3> <%= @stone.category %></h3>
+        <h4> <%= @stone.age %></h4>
+        <h4> <%= @stone.size %></h4>
+        <h4> <%= @stone.weight %></h4>
+        <h4> <%= @stone.gender %></h4>
+        <h4> <%= @stone.adress %></h4>
+        <h3> <%= @stone.price %></h3>
+    </div>
+
+
+    <div class = "share-and-save">
+        Share:
+        <img src="https://www.flaticon.com/svg/vstatic/svg/1844/1844415.svg?token=exp=1614691114~hmac=e75cafb569108da8a9a97f16487fbc61" alt="">
+        Save:
+        <img src="https://www.flaticon.com/svg/vstatic/svg/3121/3121961.svg?token=exp=1614691197~hmac=2d14a132f1b7e6195d7a40e4735a96cb" alt="">    
+    </div>
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://www.france-mineraux.fr/wp-content/uploads/2016/05/galet-amethyste-01.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.france-mineraux.fr/wp-content/uploads/2016/05/galet-amethyste-02.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.france-mineraux.fr/wp-content/uploads/2016/05/galet-amethyste-03.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class = "descrition">
+    <p> <%= @stone.description %></p>
+    </div>
+
+    <div class = "user-infos">
+      <h2> <%= @user.name %></h2>
+      <p> <%= @user.description %></p>
+    </div>
+
+    <div class = "map">
+
+
+    </div>
+
+</div>
