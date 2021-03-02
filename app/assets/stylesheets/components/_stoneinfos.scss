@@ -1,0 +1,23 @@
+.stone-name {
+  text-align:center ;
+  font-weight: bold;
+
+}
+
+.stone-info {
+    box-shadow: 0 0 15px rgba(99, 99, 99, 0.2);
+    background-color: white;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.stone-infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    margin-top: 10px;
+}
