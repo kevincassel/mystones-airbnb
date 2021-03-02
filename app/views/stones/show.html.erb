@@ -1,7 +1,7 @@
 
 
       <div class = "stone-name">
-        <h2> <%= @stone.name %></h2>
+        <h2>My Name is <strong><%= @stone.name %></strong></h2>
       </div>
 
 
@@ -14,7 +14,7 @@
       </div>
       <div class = "stone-info">
         <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/31/31370.svg?token=exp=1614704882~hmac=7935d8cb0d2ec279cccacd93c109dd86" alt="">       
-        <h4> <%= @stone.age %> years old</h4>
+        <h4> <%= @stone.age %></h4>
       </div>
       <div class = "stone-info">
         <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/847/847485.svg?token=exp=1614704977~hmac=fbc0f4f8afc75024d15a18993dc9d55b" alt="">       
@@ -34,7 +34,7 @@
       </div>
       <div class = "stone-info">
         <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/631/631180.svg?token=exp=1614707333~hmac=54702e184ff63c1a6daf400f591361f5" alt="">            
-        <h3> <%= @stone.price %> €</h3>
+        <h4> <%= @stone.price %> €</h4>
       </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
 
 <div class = "container">
 
-    <div class = "description">
+    <div class = "stone-description">
     <p> <%= @stone.name %>'s description: <%= @stone.description %></p>
     </div>
 
