@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_01_181347) do
+ActiveRecord::Schema.define(version: 2021_03_02_112228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_03_01_181347) do
     t.float "weight"
     t.text "description"
     t.string "gender"
-    t.string "touch"
+    t.string "sensation"
     t.float "price"
     t.string "address"
     t.bigint "user_id", null: false
