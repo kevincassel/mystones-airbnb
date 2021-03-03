@@ -4,7 +4,7 @@
   background-position: center;
   background-color: transparent;
   text-align: center;
-  padding: 160px 0;
+  padding: 150px 0;
 }
 
 .banner h1 {
@@ -12,7 +12,7 @@
   color: #fff;
   font-size: 46px;
   padding-bottom: 48px;
-  font-family: "Times new roman", sans-serif;
+  font-family: "Georgia", sans-serif;
 }
 
 .banner p {
@@ -20,8 +20,7 @@
   font-weight: ligher;
   font-family: "Helvetica", sans-serif;
   color: #fff;
-  opacity: .8;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  opacity: .9;
 }
 
 .btn-ghost {
@@ -38,4 +37,8 @@
 .btn-ghost:hover {
   color: #fff;
   background-color: #121013;
+}
+
+#adopt {
+  border-bottom: 5px solid #ffeebb;
 }
