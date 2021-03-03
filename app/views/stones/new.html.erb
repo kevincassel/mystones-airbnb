@@ -1,16 +1,22 @@
-<%= simple_form_for @stone do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category %>
-  <%= f.input :age %>
-  <%= f.input :size %>
-  <%= f.input :weight %>
-  <%= f.input :sensation%> 
-  <%= f.input :gender %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.input :zip %>
-  <%= f.input :town %>
-  <%= f.input :country %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class = "container">
+  <div class = "form">
+    <%= simple_form_for @stone do |f| %>
+      <%= f.input :name %>
+      <%= f.input :category %>
+      <%= f.input :age %>
+      <%= f.input :size %>
+      <%= f.input :weight %>
+      <%= f.input :sensation%> 
+      <%= f.input :gender %>
+      <%= f.input :price %>
+      <%= f.input :address %>
+      <%= f.input :zip %>
+      <%= f.input :town %>
+      <%= f.input :country %>
+      <%= f.input :description %>
+      <div class = "submit">
+      <%= f.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
