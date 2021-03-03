@@ -2,13 +2,14 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  background-color: transparent;
   text-align: center;
+  padding: 160px 0;
 }
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #fff;
   font-size: 46px;
   padding-bottom: 48px;
   font-family: "Times new roman", sans-serif;
@@ -16,24 +17,25 @@
 
 .banner p {
   font-size: 28px;
-  color: white;
+  font-weight: ligher;
+  font-family: "Helvetica", sans-serif;
+  color: #fff;
   opacity: .8;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-family: "Helvetica", sans-serif;
-  font-weight: ligher;
 }
 
 .btn-ghost {
   text-transform: uppercase;
-  color: black;
-  background-color: #f9f3f3;
-  padding: 12px 30px;
+  color: #121013;
+  background-color: #fff;
+  padding: 14px 32px;
   margin-top: 80px;
-  border-radius: 50px;
-  opacity: .8;
+  border-radius: 40px;
+  opacity: .9;
+  transition: 0.4s;
 }
 
 .btn-ghost:hover {
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #121013;
 }
