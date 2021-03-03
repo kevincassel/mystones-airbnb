@@ -17,9 +17,9 @@ User.create!(first_name: "Pierre", last_name: "Quiroule", username: "Plouf", age
 
 puts "Create Stones"
 
-Stone.create!(user: User.first, name:"Patrick", category:"Ruby", age:"37", weight:"2,8", gender:"no-binary", sensation:"smooth", price:"15,3", address:"3 rue du colonel Pollet", zip:"59000", town:"Lille", country:"France", description:"jolie")
-Stone.create!(user: User.first, name:"Cléo", category:"Basalt", age:"107", weight:"5,7", gender:"Woman", sensation:"rough", price:"1,5", address:"190 boulevard du petit poney", zip:"62100", town:"Calais", country:"France", description:"magnifique")
-Stone.create!(user: User.last, name:"Line", category:"Emeraud", age:"59", weight:"3,6", gender:"no-binary", sensation:"smooth", price:"3,2", address:"49 avenue de l'Europe", zip:"75000", town:"Paris", country:"France", description:"parfait pour dormir dessus")
-Stone.create!(user: User.last, name:"Pierre", category:"Sapphir", age:"503", weight:"10,5", gender:"Man", sensation:"rough", price:"139,6", address:"405 route du tavernier", zip:"59370", town:"Mons-en-baroeul", country:"France", description:"j'aime rouler avec ma pierre")
+Stone.create!(user: User.first, name:"Patrick", category:"Ruby", age:"37", weight:"2.8", gender:"no-binary", size:"3.5", sensation:"smooth", price:"15.3", address:"3 rue du colonel Pollet", zip:"59000", town:"Lille", country:"France", description:"jolie")
+Stone.create!(user: User.first, name:"Cléo", category:"Basalt", age:"107", weight:"5.7", gender:"Woman", size:"12", sensation:"rough", price:"1.5", address:"190 boulevard du petit poney", zip:"62100", town:"Calais", country:"France", description:"magnifique")
+Stone.create!(user: User.last, name:"Line", category:"Emeraud", age:"59", weight:"3.6", gender:"no-binary", size:"24", sensation:"smooth", price:"3.2", address:"49 avenue de l'Europe", zip:"75000", town:"Paris", country:"France", description:"parfait pour dormir dessus")
+Stone.create!(user: User.last, name:"Pierre", category:"Sapphir", age:"503", weight:"10.5", gender:"Man", size:"43", sensation:"rough", price:"139.6", address:"405 route du tavernier", zip:"59370", town:"Calais", country:"France", description:"j'aime rouler avec ma pierre")
 
 puts "Finished !"
