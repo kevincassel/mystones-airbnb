@@ -1,6 +1,6 @@
 class StonesController < ApplicationController
 
-  skip_before_action :authenticate_user!, only: [:index, :show, :new]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @stones = Stone.all
@@ -16,7 +16,7 @@ class StonesController < ApplicationController
 
   def create
     @stone = Stone.new(stone_params)
-    @stone = current_user
+    @stone.user = current_user
       if @stone.save
         redirect_to @stone
       else
@@ -27,7 +27,7 @@ class StonesController < ApplicationController
   private
 
   def stone_params
-    params.require(:stone).permit(:name, :category, :age, :weight, :gender, :price, :address, :zip, :town, :description)
+    params.require(:stone).permit(:name, :category, :age, :weight, :gender, :price, :address, :zip, :town, :description, :size, :country, :sensation)
   end
 
 end
