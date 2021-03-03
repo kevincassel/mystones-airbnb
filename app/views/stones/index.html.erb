@@ -1,4 +1,8 @@
-<h1>Our stones</h1>
+<div class = "addstone">
+  <button type="button" class="btn btn-outline-secondary">
+  <%= link_to "Add your Stone", new_stone_path %>
+  </button>
+</div>
 
 <div class = "container ml-0">
 
@@ -18,8 +22,12 @@
     <% end %>
   </div>
 
-  <div class="map ">
+  <div id="map"
+      style="width: 50%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
 
 </div>
 
