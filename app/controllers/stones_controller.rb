@@ -4,7 +4,14 @@ class StonesController < ApplicationController
 
   def index
     @stones = Stone.all
- end
+    @markers = @stones.geocoded.map do |stone|
+      {
+        lat: stone.latitude,
+        lng: stone.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { stone: stone })
+      }
+    end
+  end
 
   def show
     @stone = Stone.find(params[:id])
