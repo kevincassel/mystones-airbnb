@@ -1,4 +1,8 @@
-<h1>INDEX STONES</h1>
+<div class = "addstone">
+  <button type="button" class="btn btn-outline-secondary">
+  <%= link_to "Add your Stone", new_stone_path %>
+  </button>
+</div>
 
 <div class = "container ml-0">
 
@@ -12,12 +16,11 @@
           <p> <%= stone.age %> years old </p>
           <p> <%= stone.gender %></p>
           <img class = "avatar" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2g7UrH5_EJOmTZv5-u3kvd2ERnwdzRJa4Hg&usqp=CAU">
-          <h3><%= stone.price%>€</h3>   
+          <h3><%= stone.price%>€</h3>
         </div>
       </div>
     <% end %>
   </div>
-  
 
   <div id="map"
       style="width: 50%; height: 600px;"
