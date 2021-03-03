@@ -6,3 +6,14 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+#map {
+  margin-top: 11px;
+  margin-right: 12px;
+  border-radius: 10px;
+}
