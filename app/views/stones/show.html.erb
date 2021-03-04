@@ -38,7 +38,7 @@
     <div class = "stone-info">
       <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/631/631180.svg?token=exp=1614707333~hmac=54702e184ff63c1a6daf400f591361f5" alt="">
       <h4><%= @stone.price %> €</h4>
-      
+
     <div class = "share-and-save">
 
       <% if user_signed_in? %>
@@ -55,7 +55,7 @@
       <% end %>
 
         Share:
-        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/3121/3121961.svg?token=exp=1614691197~hmac=2d14a132f1b7e6195d7a40e4735a96cb" alt="">       
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/3121/3121961.svg?token=exp=1614691197~hmac=2d14a132f1b7e6195d7a40e4735a96cb" alt="">
         Save:
         <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/1844/1844415.svg?token=exp=1614691114~hmac=e75cafb569108da8a9a97f16487fbc61" alt="">
     </div>
@@ -69,17 +69,11 @@
 
       <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <img src="https://www.france-mineraux.fr/wp-content/uploads/2016/05/galet-amethyste-02.jpg" class="d-block w-100" height="350" alt="...">
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://www.france-mineraux.fr/wp-content/uploads/2016/05/galet-amethyste-01.jpg" class="d-block w-100" height="350" alt="...">
-        </div>
-
-        <div class="carousel-item">
-          <img src="https://www.france-mineraux.fr/wp-content/uploads/2016/05/galet-amethyste-03.jpg" class="d-block w-100" height="350" alt="...">
-        </div>
+        <% @stone.photos.each_with_index do |photo, index| %>
+          <div class="carousel-item <%= 'active' if index.zero? %>">
+            <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
+          </div>
+        <% end %>
 
       </div>
 
@@ -109,10 +103,6 @@
   </div>
 
 </div>
-
-<% @stone.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
-<% end %>
 
 <div class = "map">
 </div>
