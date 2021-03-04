@@ -1,44 +1,45 @@
 // Specific CSS for your home-page
-.banner {
-  background-size: cover;
-  background-position: center;
-  background-color: transparent;
-  text-align: center;
-  padding: 150px 0;
-}
-
-.banner h1 {
-  margin: 0;
-  color: #fff;
-  font-size: 46px;
-  padding-bottom: 48px;
+h1 {
+  font-size: 50px;
   font-family: "Georgia", sans-serif;
 }
 
-.banner p {
-  font-size: 28px;
-  font-weight: ligher;
+h2 {
+  font-size: 30px;
   font-family: "Helvetica", sans-serif;
-  color: #fff;
-  opacity: .9;
 }
 
-.btn-ghost {
-  text-transform: uppercase;
+.btn_home {
   color: #121013;
   background-color: #fff;
-  padding: 14px 32px;
-  margin-top: 80px;
-  border-radius: 40px;
-  opacity: .9;
+  border: 1px solid #cdd0cb;
+  padding: 20px 20px;
+  border-radius: 10px;
+  font-weight: lighter;
+  transition: 0.4s;
+  font-size: 18px;
+}
+
+.btn_home:hover {
+  color: #fff;
+  background-color: #121013;
+  border: 1px solid #121013;
   transition: 0.4s;
 }
 
-.btn-ghost:hover {
-  color: #fff;
-  background-color: #121013;
+#adopt {
+  border-bottom: 5px solid #cdd0cb;
 }
 
-#adopt {
-  border-bottom: 5px solid #ffeebb;
+.title {
+  padding-top: 50px;
 }
+
+.phrasing {
+  padding-top: 30px;
+}
+
+.explore {
+  padding-top: 60px;
+}
+
