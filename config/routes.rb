@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :stones do
     resources :bookings
   end
+  
+  resources :bookings , only: [:index]
+
 end

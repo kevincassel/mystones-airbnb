@@ -1,0 +1,40 @@
+
+<div class = "container">
+    <div class ="booking-cards">
+        <div class = "booked">
+            The stones I booked: 
+            <% @bookings.each do |booking|  %>
+                <div class="card" id="card-get-booked" style="width: 18rem;">
+                <%# <img src="..." class="card-img-top" alt="..."> %>
+                <div class="card-body">
+                    <h5 class="card-title">Booking number :<%= booking.id %></h5>
+                    <p class="card-text"><strong><%= booking.stone.name %></strong></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">From :<%= booking.start_date %></li>
+                    <li class="list-group-item">To : <%= booking.end_date %></li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                </div>
+            <% end %>
+        </div>
+    </div>
+    <div class = "get-booked">
+        The stones I have rented:
+        <% @bookings_on_my_stones.each do |booking|  %>
+            <div class="card" id="card-booked" style="width: 18rem;">
+            <%# <img src="..." class="card-img-top" alt="..."> %>
+            <div class="card-body">
+                <h5 class="card-title">Booking number :<%= booking.id %></h5>
+                <p class="card-text"><strong><%= booking.stone.name %></strong></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">From :<%= booking.start_date %></li>
+                <li class="list-group-item">To : <%= booking.end_date %></li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            </div>
+        <% end %>
+    </div>
+  </div>
+</div>
