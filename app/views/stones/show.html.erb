@@ -38,16 +38,29 @@
     <div class = "stone-info">
       <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/631/631180.svg?token=exp=1614707333~hmac=54702e184ff63c1a6daf400f591361f5" alt="">
       <h4><%= @stone.price %> €</h4>
+      
+    <div class = "share-and-save">
+
+      <% if user_signed_in? %>
+        <div>
+          <div id = "delete">
+            <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
+             data: { confirm: "Are you sure you want to throw away #{@stone.name} ?" } %></button>
+          </div>
+
+          <div id = "update">
+            <button type="button" class="btn btn-outline-secondary"><%= link_to "Update", edit_stone_path(@stone) %></button>
+          </div>
+        </div>
+      <% end %>
+
+        Share:
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/3121/3121961.svg?token=exp=1614691197~hmac=2d14a132f1b7e6195d7a40e4735a96cb" alt="">       
+        Save:
+        <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/1844/1844415.svg?token=exp=1614691114~hmac=e75cafb569108da8a9a97f16487fbc61" alt="">
     </div>
 
   </div>
-</div>
-
-<div class = "share-and-save">
-  Share:
-  <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/3121/3121961.svg?token=exp=1614691197~hmac=2d14a132f1b7e6195d7a40e4735a96cb" alt="">
-  Save:
-  <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/1844/1844415.svg?token=exp=1614691114~hmac=e75cafb569108da8a9a97f16487fbc61" alt="">
 </div>
 
 <div class = "container">
