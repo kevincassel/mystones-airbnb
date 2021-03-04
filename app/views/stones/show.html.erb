@@ -41,17 +41,18 @@
 
     <div class = "share-and-save">
 
-
+      <% if user_signed_in? %>
         <div>
           <div id = "delete">
-          <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
-              data: { confirm: "Are you sure you want to throw away #{@stone.name} ?" } %></button>
+            <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
+             data: { confirm: "Are you sure you want to throw away #{@stone.name} ?" } %></button>
           </div>
 
           <div id = "update">
-          <button type="button" class="btn btn-outline-secondary"><%= link_to "Update", edit_stone_path(@stone) %></button>
+            <button type="button" class="btn btn-outline-secondary"><%= link_to "Update", edit_stone_path(@stone) %></button>
           </div>
         </div>
+      <% end %>
 
         Share:
         <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/3121/3121961.svg?token=exp=1614691197~hmac=2d14a132f1b7e6195d7a40e4735a96cb" alt="">       
