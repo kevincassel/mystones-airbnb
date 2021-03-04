@@ -2,16 +2,37 @@ class StonesController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
 
+  # def index
+  #   @stones = Stone.all
+  #   @markers = @stones.geocoded.map do |stone|
+  #     {
+  #       lat: stone.latitude,
+  #       lng: stone.longitude,
+  #       infoWindow: render_to_string(partial: "info_window", locals: { stone: stone })
+  #     }
+  # end
+
   def index
     @stones = Stone.all
-    @markers = @stones.geocoded.map do |stone|
+      @markers = @stones.geocoded.map do |stone|
       {
-        lat: stone.latitude,
-        lng: stone.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { stone: stone })
+      lat: stone.latitude,
+      lng: stone.longitude,
+      infoWindow: render_to_string(partial: "info_window", locals: { stone: stone })
       }
     end
+    if params[:query].present?
+      sql_query = " \
+      stones.name @@ :query \
+      OR stones.name @@ :query \
+      "
+      @stones = Stone.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @stones = Stone.all
+    end
   end
+
+
 
   def show
     @stone = Stone.find(params[:id])

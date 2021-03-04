@@ -3,6 +3,21 @@
   <%= link_to "Add your Stone", new_stone_path %>
   </button>
 </div>
+<%# //////////////////////// %>
+<%# //////////////////////// %>
+<div class = "container">
+  <%= form_tag stones_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find the Stone you need"
+    %>
+    <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
+  <% end %>
+</div>
+
+<%# //////////////////////// %>
+<%# //////////////////////// %>
 
 <div class = "flex box" >
 
