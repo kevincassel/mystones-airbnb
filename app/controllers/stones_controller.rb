@@ -16,7 +16,7 @@ class StonesController < ApplicationController
   def show
     @stone = Stone.find(params[:id])
   end
-  
+
   def new
     @stone = Stone.new
   end
@@ -50,7 +50,7 @@ class StonesController < ApplicationController
   private
 
   def stone_params
-    params.require(:stone).permit(:name, :category, :age, :weight, :gender, :price, :address, :zip, :town, :description, :size, :country, :sensation)
+    params.require(:stone).permit(:name, :category, :age, :weight, :gender, :price, :address, :zip, :town, :description, :size, :country, :sensation, photos: [])
   end
 
 end
