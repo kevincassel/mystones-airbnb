@@ -47,7 +47,7 @@
       <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/618/618859.svg?token=exp=1614705149~hmac=eeeaed15c10319d7c374cab4d16c1be2" alt="">
       <h4><%= @stone.town %></h4>
     </div>
-
+ 
     <div class = "stone-info">
       <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/631/631180.svg?token=exp=1614707333~hmac=54702e184ff63c1a6daf400f591361f5" alt="">
       <h4><%= @stone.price %> €</h4>
@@ -118,4 +118,9 @@
 </div>
 
 <div class = "map">
+  <div id="map"
+    style="width: 50%; height: 600px;"
+    data-markers="<%= @marker.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
