@@ -15,6 +15,7 @@ class StonesController < ApplicationController
 
   def show
     @stone = Stone.find(params[:id])
+    @booking = Booking.new
   end
   
   def new
