@@ -17,7 +17,7 @@ class StonesController < ApplicationController
     @stone = Stone.find(params[:id])
     @booking = Booking.new
   end
-  
+
   def new
     @stone = Stone.new
   end
@@ -32,10 +32,26 @@ class StonesController < ApplicationController
       end
   end
 
+  def edit
+    @stone = Stone.find(params[:id])
+  end
+
+  def update
+    @stone = Stone.find(params[:id])
+    @stone.update(stone_params)
+    redirect_to stone_path(@stone)
+  end
+
+  def destroy
+    @stone = Stone.find(params[:id])
+    @stone.destroy
+    redirect_to stones_path
+  end
+
   private
 
   def stone_params
-    params.require(:stone).permit(:name, :category, :age, :weight, :gender, :price, :address, :zip, :town, :description, :size, :country, :sensation)
+    params.require(:stone).permit(:name, :category, :age, :weight, :gender, :price, :address, :zip, :town, :description, :size, :country, :sensation, photos: [])
   end
 
 end
