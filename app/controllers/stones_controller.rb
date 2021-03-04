@@ -24,6 +24,7 @@ class StonesController < ApplicationController
 
   def show
     @stone = Stone.find(params[:id])
+    @marker = [{ lat: @stone.latitude, lng: @stone.longitude }]  
     @booking = Booking.new
   end
 
