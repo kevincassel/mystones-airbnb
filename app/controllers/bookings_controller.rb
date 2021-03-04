@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def index
+    @bookings = Booking.where(user: current_user)
+    @bookings_on_my_stones = current_user.stones.map {|stone| stone.bookings }.flatten
+  end
 
   def create
     @stone = Stone.find(params[:stone_id])
