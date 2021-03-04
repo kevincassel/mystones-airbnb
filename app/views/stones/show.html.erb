@@ -1,9 +1,14 @@
+<%= simple_form_for [@stone, @booking] do |f| %>
+<%= f.button :submit %>
+<% end %>
+                         
 <div class = "stone-name">
   <h2><strong><%= @stone.name %></strong></h2>
 </div>
 
 <div class = "container">
   <div class = "stone-infos">
+
 
     <div class = "stone-info">
       <img class = "icon" src="https://www.flaticon.com/svg/vstatic/svg/3076/3076532.svg?token=exp=1614774498~hmac=d3970e65dae8d43906a17b8b03fd9cca" alt="">
