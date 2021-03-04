@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
 
   def create
     @stone = Stone.find(params[:stone_id])
-    @booking = Booking.new
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.stone = @stone
     if @booking.save
@@ -12,4 +12,11 @@ class BookingsController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date)
+  end
+
 end
