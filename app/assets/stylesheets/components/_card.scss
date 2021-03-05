@@ -3,7 +3,7 @@
     height: 200px;
     width: 800px;
     background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: 0.5px solid #cdd0cb;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -20,14 +20,13 @@
 }
 
 .card-product h2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product h3 {
   font-size: 16px;
-  font-weight: bold;
   margin: 0;
   position: absolute;
   right: 20px ;
@@ -38,8 +37,8 @@
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .card-product .card-product-infos {
@@ -49,7 +48,7 @@
 .card-product .avatar {
   height: 60px ;
   width: 60px;
-  border-radius: 50%;
+  border-radius: 20%;
   object-fit: cover;
   border:1px solid white;
   position: absolute;
@@ -59,12 +58,12 @@
 
 .card-product a {
   text-decoration: none;
-  color: black;
+  color: #121013;
 }
 
 .card-product a:hover {
   text-decoration: none;
-  color: darkgray;
+  color: #cdd0cb;
 }
 
 .get-booked{
