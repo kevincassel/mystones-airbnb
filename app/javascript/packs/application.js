@@ -30,6 +30,11 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 })
 
+// Date Flatpickr
+import { initFlatpickr } from "../plugins/flatpickr";
+
+initFlatpickr();
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
