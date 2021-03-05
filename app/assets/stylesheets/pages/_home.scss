@@ -1,14 +1,4 @@
 // Specific CSS for your home-page
-h1 {
-  font-size: 50px;
-  font-family: "Georgia", sans-serif;
-}
-
-h2 {
-  font-size: 30px;
-  font-family: "Helvetica", sans-serif;
-}
-
 .btn_home {
   color: #121013;
   background-color: #fff;
@@ -17,6 +7,7 @@ h2 {
   border-radius: 10px;
   transition: 0.4s;
   font-size: 18px;
+  margin-top: 30px;
 }
 
 .btn_home:hover {
@@ -30,14 +21,37 @@ h2 {
   border-bottom: 5px solid #cdd0cb;
 }
 
-.title {
-  padding-top: 50px;
+.searching {
+  margin-top: 20px;
 }
 
-.phrasing {
-  padding-top: 30px;
-}
-
-.explore {
+.banner {
+  background-size: cover;
+  background-position: center;
   padding-top: 60px;
+  padding-bottom: 320px;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-size: 50px;
+  font-family: "Georgia", sans-serif;
+  font-weight: lighter;;
+}
+
+.banner h2 {
+  font-size: 30px;
+  font-family: "Helvetica", sans-serif;
+  color: #fff;
+}
+
+#title {
+  margin-bottom: 50px;
+}
+
+#phrasing {
+  margin-top: 50px;
 }
