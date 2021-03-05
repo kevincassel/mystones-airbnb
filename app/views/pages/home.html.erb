@@ -1,26 +1,8 @@
-<div class="container">
-
-  <div class="title">
-    <h1>My Stones</h1>
-  </div>
-  
-  <div class="phrasing">
-    <h2>Change your life, <span id="adopt">adopt a stone</span>.</h2>
-  </div>
-
-  <div class="explore">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1531816247963-c7b28072d65d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80);">
+  <div class="container">
+    <h1 id="title">My Stones</h1>
+    <h2 id="phrasing">Change your life, <span id="adopt">adopt a stone</span>.</h2>
     <%= link_to "Explore our stones", stones_path, class: "btn btn_home" %>
   </div>
-
 </div>
 
-<div class = "container">
-  <%= form_tag stones_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find the Stone you need"
-    %>
-    <%= submit_tag "Search", class: "btn btn-outline-secondary" %>
-  <% end %>
-</div>
