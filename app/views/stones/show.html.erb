@@ -1,6 +1,6 @@
 <div class="container">
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h2>Flatpickr Demo</h2>
+    <h2>Booking</h2>
 
     <%= simple_form_for [@stone, @booking] do |f| %>
       <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
@@ -13,63 +13,6 @@
                          
 <div class = "stone-name">
   <h2><strong><%= @stone.name %></strong></h2>
-</div>
-
-<div class = "container">
-  <div class = "stone-infos">
-
-
-      <div class = "stone-info">
-        <i class="far fa-gem"></i>       
-        <h3> <%= @stone.category %></h3>
-      </div>
-      <div class = "stone-info">
-        <i class="fas fa-birthday-cake"></i>
-        <h4> <%= @stone.age %></h4>
-      </div>
-      <div class = "stone-info">
-        <i class="fas fa-ruler-vertical"></i>
-        <h4> <%= @stone.size %> cm</h4>
-      </div>
-      <div class = "stone-info">
-        <i class="fas fa-weight-hanging"></i>
-        <h4> <%= @stone.weight %> kg</h4>
-      </div>
-      <div class = "stone-info">
-        <i class="fas fa-venus-mars"></i>
-        <h4> <%= @stone.gender %></h4>
-      </div>
-      <div class = "stone-info">
-        <i class="fas fa-city"></i>
-        <h4> <%= @stone.town %></h4>
-      </div>
-      <div class = "stone-info">
-        <i class="fas fa-euro-sign"></i>
-        <h4> <%= @stone.price %> €</h4>
-      </div>
-
-    <div class = "share-and-save">
-
-      <% if user_signed_in? && @stone.user == current_user %>
-        <div>
-          <div id = "delete">
-            <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
-             data: { confirm: "Are you sure you want to throw away #{@stone.name} ?" } %></button>
-          </div>
-
-          <div id = "update">
-            <button type="button" class="btn btn-outline-secondary"><%= link_to "Update", edit_stone_path(@stone) %></button>
-          </div>
-        </div>
-      <% end %>
-
-        Share:
-        <i class="fas fa-share-alt-square"></i>
-        Save:
-        <i class="fas fa-save"></i>
-    </div>
-
-  </div>
 </div>
 
 <div class = "container">
@@ -101,14 +44,44 @@
 </div>
 
 <div class = "container">
+  <div class = "stone-infos">
+
+
+      <div class = "stone-info">
+        <i class="far fa-gem"></i>
+        <h4> <%= @stone.category %></h4>
+      </div>
+      <div class = "stone-info">
+        <i class="fas fa-birthday-cake"></i>
+        <h4> <%= @stone.age %> years old</h4>
+      </div>
+      <div class = "stone-info">
+        <i class="fas fa-ruler-vertical"></i>
+        <h4> <%= @stone.size %> cm</h4>
+      </div>
+      <div class = "stone-info">
+        <i class="fas fa-weight-hanging"></i>
+        <h4> <%= @stone.weight %> kg</h4>
+      </div>
+      <div class = "stone-info">
+        <i class="fas fa-venus-mars"></i>
+        <h4> <%= @stone.gender %></h4>
+      </div>
+      <div class = "stone-info">
+        <i class="fas fa-city"></i>
+        <h4> <%= @stone.town %></h4>
+      </div>
+      <div class = "stone-info">
+        <i class="fas fa-euro-sign"></i>
+        <h4> <%= @stone.price %> €</h4>
+      </div>
+  </div>
+</div>
+
+<div class = "container">
 
   <div class = "stone-description">
-    <p><%= @stone.name %>'s description: <%= @stone.description %></p>
-  </div>
-
-  <div class = "user-infos">
-    <p>The Owner of <%= @stone.name %> is <%= @stone.user.username %></p>
-    <p><%= @stone.user.username %>'s presentation : <%= @stone.user.description %></p>
+    <p><%= @stone.description %></p>
   </div>
 
 </div>
@@ -119,4 +92,22 @@
     data-markers="<%= @marker.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
 </div>
+
+    <div class = "share-and-save">
+
+      <% if user_signed_in? %>
+        <div>
+          <div id = "update" >
+            <button type="button" class="btn btn-outline-secondary"><%= link_to "Update", edit_stone_path(@stone) %></button>
+          </div>
+
+          <div id = "delete">
+            <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
+             data: { confirm: "Are you sure you want to throw away #{@stone.name} ?" } %></button>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
