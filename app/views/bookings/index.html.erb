@@ -1,40 +1,42 @@
 <div class="container">
-    <div class = "book mx-auto">
-        <h2>THE STONES I BOOKED</h2>
-        <% @bookings.each do |booking|  %>
-            <div class="card-trip">
-                <% if booking.stone.photos.first %>
-                <%= image_tag booking.stone.photos.first %>
-                <% else %>
-                <img src="https://stickeramoi.com/16833-large_default/sticker-galet-cailloux-pierre-gris-clair.jpg" />
-                <% end %>
-                <div class="card-trip-infos">
-                <div>
-                    <h2><%= booking.stone.name %></h2>
-                    <p>From :<%= booking.start_date %> , to : <%= booking.end_date %></p>
+    <div class = "flex-box">
+     <div>
+            <h2>THE STONES I BOOKED</h2>
+            <% @bookings.each do |booking|  %>
+                <div class="card-trip">
+                    <% if booking.stone.photos.first %>
+                    <%= image_tag booking.stone.photos.first %>
+                    <% else %>
+                    <img src="https://stickeramoi.com/16833-large_default/sticker-galet-cailloux-pierre-gris-clair.jpg" />
+                    <% end %>
+                    <div class="card-trip-infos">
+                    <div>
+                        <h2><%= link_to booking.stone.name, stone_path(booking.stone.id) %></h2>
+                        <p>From :<%= booking.start_date %> , to : <%= booking.end_date %></p>
+                    </div>
+                    <h2 class="card-trip-pricing">Price: <%= booking.stone.price %> €/ day</h2>
                 </div>
-                <h2 class="card-trip-pricing">Price: <%= booking.stone.price %> €/ day</h2>
             </div>
+            <% end %>
         </div>
-        <% end %>
-
-        <h2>MY STONES THAT HAVE BEEN BOOKED</h2>
-        <% @bookings_on_my_stones.each do |booking|  %>
-            <div class="card-trip">
-                <% if booking.stone.photos.first %>
-                <%= image_tag booking.stone.photos.first %>
-                <% else %>
-                <img src="https://stickeramoi.com/16833-large_default/sticker-galet-cailloux-pierre-gris-clair.jpg" />
-                <% end %>
-                <div class="card-trip-infos">
-                <div>
-                    <h2><%= booking.stone.name %></h2>
-                    <p>From :<%= booking.start_date %> , to : <%= booking.end_date %></p>
+        <div>
+            <h2>MY STONES THAT HAVE BEEN BOOKED</h2>
+            <% @bookings_on_my_stones.each do |booking|  %>
+                <div class="card-trip">
+                    <% if booking.stone.photos.first %>
+                    <%= image_tag booking.stone.photos.first %>
+                    <% else %>
+                    <img src="https://stickeramoi.com/16833-large_default/sticker-galet-cailloux-pierre-gris-clair.jpg" />
+                    <% end %>
+                    <div class="card-trip-infos">
+                    <div>
+                        <h2><%= link_to booking.stone.name, stone_path(booking.stone.id) %></h2>
+                        <p>From :<%= booking.start_date %> , to : <%= booking.end_date %></p>
+                    </div>
+                    <h2 class="card-trip-pricing">Price: <%= booking.stone.price %> €/ day</h2>
                 </div>
-                <h2 class="card-trip-pricing">Price: <%= booking.stone.price %> €/ day</h2>
             </div>
+            <% end %>
         </div>
-        <% end %>
     </div>
 </div>
-    <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
