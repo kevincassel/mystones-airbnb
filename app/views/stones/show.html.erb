@@ -1,16 +1,3 @@
-<div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h2>Booking</h2>
-
-    <%= simple_form_for [@stone, @booking] do |f| %>
-      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Go", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
-
-                         
 <div class = "stone-name">
   <h2><strong><%= @stone.name %></strong></h2>
 </div>
@@ -45,8 +32,6 @@
 
 <div class = "container">
   <div class = "stone-infos">
-
-
       <div class = "stone-info">
         <i class="far fa-gem"></i>
         <h4> <%= @stone.category %></h4>
@@ -79,11 +64,21 @@
 </div>
 
 <div class = "container">
-
   <div class = "stone-description">
     <p><%= @stone.description %></p>
   </div>
+</div>
 
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Booking</h2>
+
+    <%= simple_form_for [@stone, @booking] do |f| %>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
 
 <div class = "map">
@@ -95,19 +90,19 @@
 
 </div>
 
-    <div class = "share-and-save">
+<div class = "share-and-save">
 
-      <% if user_signed_in? %>
-        <div>
-          <div id = "update" >
-            <button type="button" class="btn btn-outline-secondary"><%= link_to "Update", edit_stone_path(@stone) %></button>
-          </div>
+  <% if user_signed_in? %>
+    <div>
+      <div id = "update" >
+        <button type="button" class="btn btn-outline-secondary"><%= link_to "Update", edit_stone_path(@stone) %></button>
+      </div>
 
-          <div id = "delete">
-            <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
-             data: { confirm: "Are you sure you want to throw away #{@stone.name} ?" } %></button>
-          </div>
-        </div>
-      <% end %>
-
+      <div id = "delete">
+        <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
+         data: { confirm: "Are you sure you want to throw away #{@stone.name} ?" } %></button>
+      </div>
     </div>
+  <% end %>
+
+</div>
