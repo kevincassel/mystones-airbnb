@@ -49,7 +49,7 @@
 
     <div class = "share-and-save">
 
-      <% if user_signed_in? %>
+      <% if user_signed_in? && @stone.user == current_user %>
         <div>
           <div id = "delete">
             <button type="button" class="btn btn-outline-secondary"><%= link_to "Delete",stone_path(@stone), method: :delete,
