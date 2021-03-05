@@ -28,8 +28,11 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding-top: 60px;
-  padding-bottom: 320px;
+  image-rendering: auto;
+  padding-top: 100px;
+  padding-bottom: 600px;
+  width: 100%;
+  height: 600px;
 }
 
 .banner h1 {
