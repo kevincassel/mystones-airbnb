@@ -32,3 +32,38 @@
   text-decoration: none;
   color: black;
 }
+
+.addstone .btnhome {
+  color: #121013;
+  background-color: #fff;
+  border: 1px solid #CDD0CB;
+  padding: 20px 20px;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-size: 18px;
+}
+.addstone .btnhome:hover {
+  color: #fff;
+  background-color: #121013;
+  border: 1px solid #121013;
+  transition: 0.4s;
+}
+
+#aaa {
+  color: #121013;
+  background-color: #fff;
+  border: 1px solid #CDD0CB;
+  padding: 20px 20px;
+  border-radius: 10px;
+  transition: 0.4s;
+  font-size: 18px;
+
+}
+
+#aaa:hover {
+  color: black;
+
+  border: 1px solid #121013;
+  transition: 0.4s;
+
+}
