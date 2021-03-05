@@ -128,7 +128,26 @@
   width: 40px;
 }
 
-.book h2 {
+.flex-box h2 {
   margin-top: 30px;
+  margin-left: 15px;
+}
 
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 a:hover {
+  text-decoration: none;
+  color:darkgray;
+}
+
+.card-trip {
+  margin: 20px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content:space-between;
 }
