@@ -1,63 +1,40 @@
-
-<div class = "container">
-    <div class ="booking-cards">
-        <div class = "booked">
-            The stones I booked: 
-            <% @bookings.each do |booking|  %>
-                <div class="card" id="card-get-booked" style="width: 40rem;">
-
-                    <div class = "booking-carousel">
-
-                    <div id="carousel-<%= booking.stone.id %>" class="carousel slide" data-ride="carousel">
-
-                        <div class="carousel-inner">
-
-                            <% booking.stone.photos.each_with_index do |photo, index| %>
-                            <div class="carousel-item <%= 'active' if index.zero? %>">
-                                <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
-                            </div>
-                            <% end %>
-                        </div>
-                        <a class="carousel-control-prev" href="#carousel-<%= booking.stone.id %>" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carousel-<%= booking.stone.id %>" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-
-                    <div class="card-body">
-                        <h5 class="card-title">Booking number :<%= booking.id %></h5>
-                        <p class="card-text"><strong><%= booking.stone.name %></strong></p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">From :<%= booking.start_date %></li>
-                        <li class="list-group-item">To : <%= booking.end_date %></li>
-                        <li class="list-group-item">Price: <%= booking.stone.price %> €/ day</li>
-                    </ul>
+<div class="container">
+    <div class = "book mx-auto">
+        <h2>THE STONES I BOOKED</h2>
+        <% @bookings.each do |booking|  %>
+            <div class="card-trip">
+                <% if booking.stone.photos.first %>
+                <%= image_tag booking.stone.photos.first %>
+                <% else %>
+                <img src="https://stickeramoi.com/16833-large_default/sticker-galet-cailloux-pierre-gris-clair.jpg" />
+                <% end %>
+                <div class="card-trip-infos">
+                <div>
+                    <h2><%= booking.stone.name %></h2>
+                    <p>From :<%= booking.start_date %> , to : <%= booking.end_date %></p>
                 </div>
-            <% end %>
+                <h2 class="card-trip-pricing">Price: <%= booking.stone.price %> €/ day</h2>
+            </div>
         </div>
-    </div>
+        <% end %>
 
-    <div class = "get-booked">
-        The stones I have rented:
+        <h2>MY STONES THAT HAVE BEEN BOOKED</h2>
         <% @bookings_on_my_stones.each do |booking|  %>
-            <div class="card" id="card-booked" style="width: 18rem;">
-   
-            <div class="card-body">
-                <h5 class="card-title">Booking number :<%= booking.id %></h5>
-                <p class="card-text"><strong><%= booking.stone.name %></strong></p>
+            <div class="card-trip">
+                <% if booking.stone.photos.first %>
+                <%= image_tag booking.stone.photos.first %>
+                <% else %>
+                <img src="https://stickeramoi.com/16833-large_default/sticker-galet-cailloux-pierre-gris-clair.jpg" />
+                <% end %>
+                <div class="card-trip-infos">
+                <div>
+                    <h2><%= booking.stone.name %></h2>
+                    <p>From :<%= booking.start_date %> , to : <%= booking.end_date %></p>
+                </div>
+                <h2 class="card-trip-pricing">Price: <%= booking.stone.price %> €/ day</h2>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">From :<%= booking.start_date %></li>
-                <li class="list-group-item">To : <%= booking.end_date %></li>
-                <li class="list-group-item">Price: <%= booking.stone.price %> €/ day</li>
-            </ul>
-            </div>
+        </div>
         <% end %>
     </div>
-  </div>
 </div>
+    <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
